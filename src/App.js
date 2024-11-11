@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { io } from 'socket.io-client';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -35,6 +36,10 @@ React.useEffect(() => {
 
       <button onClick={() => {
         setCheckSocket('send to server message ')}}>click</button>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
     </div>
   );
 }
